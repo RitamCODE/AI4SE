@@ -1,0 +1,21 @@
+***
+
+### 07-rtm.csv
+
+```csv
+ReqID,StoryID,NFRID,ADRID,C4 Node/Edge,Diagram File/Name
+FR-001,"As a researcher I want to upload...",,,"API Gateway","Sequence-Ingestion"
+FR-003,"As a researcher I want a full provenance...",,ADR-01,"Pipeline Orchestrator","Sequence-Ingestion"
+FR-010,"As an imaging tech I want automatic motion correction...",NFR-P-02,,"Processing Workers",""
+FR-030,"As a clinician I want cone density maps...",NFR-A-01,,"Processing Workers",""
+FR-050,"As a labeler I want to edit a mask...",NFR-U-01,,"Web UI -> API Gateway","Sequence-HITL"
+FR-051,"As a labeler I want active-learning tiles...",,,"API Gateway",""
+FR-052,"As a reviewer I want multi-rater adjudication...",,,"Web UI","Use Case Diagram"
+FR-060,"As an ML engineer I want to register a model...",,ADR-03,"Model Registry Service","Sequence-Model-Deployment"
+FR-061,"As an ML engineer I want canary deploys...",NFR-R-01,ADR-03,"Orchestrator -> Model Registry","Sequence-Model-Deployment"
+FR-062,"As an ML engineer I want drift alerts...",NFR-O-01,,"Processing Workers",""
+FR-070,"As an admin I want SSO + RBAC...",NFR-S-01,,"API Gateway -> SSO Provider","STRIDE Summary"
+FR-071,"As an auditor I want complete access logs...",NFR-O-01,,"Metadata Database","Sequence-HITL"
+FR-072,"As a data manager I want PHI de-identification...",NFR-S-02,,"MAS -> Research Data Share","STRIDE Summary"
+FR-080,"As a PI I want cohort exports...",,ADR-02,"Object Storage",""
+VV-01,"As QA I want a golden-case suite...",NFR-M-01,,"",""

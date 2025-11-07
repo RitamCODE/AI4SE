@@ -1,0 +1,27 @@
+
+---
+
+### 7. `07-rtm.csv`
+```csv
+ReqID,StoryID,NFRID,ADRID,C4 Node/Edge,Diagram File/Name
+FR-001,Researcher uploads volume,,ADR-001,Ingest ← Researcher,06-sequences.md
+FR-002,Researcher uploads volume,NFR-S-01,ADR-002,Ingest → ObjectStorage,06-sequences.md
+FR-003,Researcher uploads volume,,ADR-002,Ingest → MetadataDB,06-sequences.md
+FR-004,Researcher uploads volume,NFR-O-01,,Ingest ↔ ObjectStorage,06-sequences.md
+FR-010,Imaging tech monitors runs,NFR-P-02,ADR-001,Preproc,02-container.md
+FR-020,,,,Registration,02-container.md
+FR-030,Clinician views density maps,NFR-A-01,ADR-003,ReviewUI,02-container.md
+FR-033,Clinician views density maps,,,Quantification,04-usecases.md
+FR-040,Researcher exports metrics,NFR-R-01,ADR-005,Export → ResearchShare,06-sequences.md
+FR-050,Labeler edits masks,NFR-U-01,ADR-003,ReviewUI,06-sequences.md
+FR-051,Reviewer adjudicates,,,ReviewUI → MetadataDB,06-sequences.md
+FR-052,Reviewer adjudicates,,,ReviewUI,02-container.md
+FR-060,ML engineer registers model,,ADR-004,ModelRegistry,06-sequences.md
+FR-061,ML engineer registers model,NFR-R-01,ADR-004,ModelRegistry ↔ Segmentation,06-sequences.md
+FR-070,Admin checks compliance,NFR-S-01,,Audit → MetadataDB,05-stride.md
+FR-071,Auditor checks compliance,NFR-O-01,,Audit,02-container.md
+FR-072,Data manager schedules exports,NFR-S-02,ADR-005,Export,02-container.md
+FR-080,Data manager schedules exports,NFR-R-01,ADR-005,Export → ResearchShare,06-sequences.md
+NFR-P-01,,,ADR-001,Preproc,02-container.md
+NFR-U-01,,,ADR-003,ReviewUI,06-sequences.md
+NFR-S-01,,,ADR-005,SSOProvider → All Containers,05-stride.md

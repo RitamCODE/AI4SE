@@ -1,0 +1,50 @@
+ReqID,StoryID,NFRID,ADRID,C4_Node_Edge,Diagram_File_Name
+FR-001,Upload volume,NFR-S-01,ADR-003,API Gateway → Object Store,06-sequences.md#diagram-1
+FR-002,Upload volume,,ADR-003,API Gateway (validation),06-sequences.md#diagram-1
+FR-003,Provenance manifest,NFR-R-01,ADR-001,Orchestrator → Metadata DB,06-sequences.md#diagram-1
+FR-004,Provenance manifest,,ADR-003,Object Store (versioned artifacts),06-sequences.md#diagram-1
+FR-010,QC score,NFR-P-02,ADR-001,Preprocessor,02-container.md
+FR-030,Cone density,NFR-A-01,ADR-002,Segmenter → Model Registry,02-container.md
+FR-033,Uncertainty maps,NFR-A-02,ADR-002,Segmenter (output),06-sequences.md#diagram-2
+FR-040,Metrics per ROI,,ADR-001,Metrics Engine,02-container.md
+FR-050,Edit masks,NFR-U-01,ADR-005,Web UI → API Gateway,06-sequences.md#diagram-2
+FR-051,Active-learning queue,,ADR-005,API Gateway → Metadata DB,06-sequences.md#diagram-2
+FR-060,Register model,,ADR-002,Model Registry → Object Store,06-sequences.md#diagram-3
+FR-061,Canary deploys,NFR-R-01,ADR-002,API Gateway (routing),06-sequences.md#diagram-3
+FR-062,Drift detection,NFR-A-02,ADR-002,Drift Cron Job → Metadata DB,06-sequences.md#diagram-3
+FR-070,SSO + RBAC,NFR-S-01,ADR-004,API Gateway → SSO,01-context.md
+FR-071,Audit logs,NFR-O-01,ADR-004,Metadata DB (audit triggers),06-sequences.md#diagram-2
+FR-072,PHI de-ID,NFR-S-02,ADR-003,API Gateway (de-ID logic),06-sequences.md#diagram-1
+FR-080,Exports,,ADR-003,API Gateway → Export Storage,01-context.md
+NFR-P-01,Cone density,,,Segmenter (GPU),02-container.md
+NFR-P-02,QC score,,ADR-001,Preprocessor,02-container.md
+NFR-R-01,Idempotent retries,,ADR-001,Orchestrator,06-sequences.md#diagram-1
+NFR-R-02,Idempotent retries,,ADR-001,Orchestrator (retry logic),06-sequences.md#diagram-1
+NFR-A-01,Cone density,,ADR-002,Model Registry (gates),06-sequences.md#diagram-3
+NFR-A-02,Drift alerts,,ADR-002,Drift Cron Job,06-sequences.md#diagram-3
+NFR-S-01,SSO+RBAC,,ADR-003 ADR-004,Object Store (KMS) + API Gateway (TLS),01-context.md
+NFR-S-02,PHI de-ID,,ADR-003,API Gateway + Metadata DB (log redaction),05-stride.md
+NFR-U-01,Overlay viz,,ADR-005,Web UI (tile cache),06-sequences.md#diagram-2
+NFR-M-01,Golden-case suite,,,CI/CD (out of C4 scope),04-usecases.md#uc-qa
+NFR-O-01,Audit logs,,ADR-004,Metadata DB + Orchestrator (traces),05-stride.md
+U-01,Overlay viz,,ADR-005,Web UI,06-sequences.md#diagram-2
+U-02,Edit masks,,ADR-005,Web UI,06-sequences.md#diagram-2
+U-03,Model registry,,ADR-002,Web UI → Model Registry,06-sequences.md#diagram-3
+A-01,Upload volume,,ADR-003,API Gateway POST /cases,06-sequences.md#diagram-1
+A-02,RUN_ID tracking,,ADR-001,API Gateway POST /runs,06-sequences.md#diagram-1
+A-03,RUN_ID tracking,,ADR-001,API Gateway GET /runs/{id},06-sequences.md#diagram-1
+A-04,Metrics per ROI,,ADR-001,API Gateway GET /cases/{id}/metrics,02-container.md
+A-05,Edit masks,,ADR-004,API Gateway POST /labels,06-sequences.md#diagram-2
+A-06,Register model,,ADR-002,API Gateway GET /models/{id},06-sequences.md#diagram-3
+D-01,Upload volume,,,Scanner → API Gateway (DICOM),01-context.md
+D-02,Upload volume,,,Scanner → API Gateway (file drop),01-context.md
+F-01,Upload volume,,,API Gateway (format validation),06-sequences.md#diagram-1
+F-02,Metrics per ROI,,,Metrics Engine → Object Store,02-container.md
+DR-01,Register model,,,Model Registry (dataset catalog),03-adrs.md#adr-002
+DR-02,Edit masks,,,Metadata DB (label versions),06-sequences.md#diagram-2
+DR-03,Provenance manifest,,ADR-003,Object Store (lifecycle policies),03-adrs.md#adr-003
+VV-01,Golden-case suite,NFR-M-01,,CI/CD (RTM coverage),04-usecases.md
+VV-02,Golden-case suite,,,Orchestrator (regression runs),04-usecases.md
+C-01,PHI de-ID,NFR-S-01,ADR-003,Object Store (approved buckets only),05-stride.md
+C-02,Provenance manifest,,ADR-001,Orchestrator (immutable manifest),06-sequences.md#diagram-1
+C-03,Provenance manifest,,,Orchestrator (deterministic seeds),06-sequences.md#diagram-1
