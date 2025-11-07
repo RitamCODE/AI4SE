@@ -1,0 +1,16 @@
+
+---
+
+```csv
+ReqID,StoryID,NFRID,ADRID,C4 Node/Edge,Diagram
+FR-001–FR-004,US-16;US-17,NFR-001(Assumed),ADR-001,EdgeCaptureScoring;EdgeCaptureScoring->EdgeEventPolicy,"Seq-1; UC_CaptureScore"
+FR-006–FR-013,US-18;US-19,NFR-002(Assumed),ADR-001,EdgeEventPolicy;EdgeEventPolicy->MissionPlannerDroneGateway,"Seq-1; UC_FilterAlerts; UC_PlanMission"
+FR-014–FR-017,US-10–US-15,NFR-008(Assumed),ADR-004,MissionPlannerDroneGateway;MissionPlannerDroneGateway->DroneFleet,"Seq-1; UC_PlanMission; UC_ExecuteMission"
+FR-018–FR-021,US-24–US-28,NFR-003,ADR-002,EdgeDataTransfer;EdgeDataTransfer->TapisOSC,"Seq-1; Seq-2; UC_TransferMedia"
+FR-023–FR-026,US-29–US-34,NFR-006(Assumed);NFR-007(Assumed),ADR-003,TapisOSCOrchestrator;TapisOSCOrchestrator->TapisOSC,"Seq-1; UC_ManageJobs"
+FR-027–FR-029,US-04–US-09;US-35,NFR-009(Assumed);NFR-010(Assumed),ADR-005,ConfigAdminAPI;ConfigAdminAPI->(all edge planners),"Seq-3; UC_ManageConfig"
+FR-030–FR-032,US-36–US-38,NFR-010,ADR-005,MonitoringTelemetry;(*->MonitoringTelemetry),"Seq-2; Seq-3; UC_Monitor"
+FR-033–FR-037(offline/resilience),US-01–US-03,NFR-002(Assumed),ADR-001,EdgeCaptureScoring;EdgeEventPolicy;EdgeDataTransfer,"Seq-1; Seq-2"
+Security-RBAC(assumed FR-022),US-04–US-09,NFR-005(Assumed),ADR-005,ConfigAdminAPI<->AuthIdP;external edges,"STRIDE table; UC_ManageConfig"
+SafetyAssumptions(Drone),US-10–US-15,NFR-008(Assumed),ADR-004,EdgeEventPolicy->MissionPlannerDroneGateway->DroneFleet,"Seq-1"
+LatencyTelemetry(FR-032),US-38,NFR-002(Assumed),ADR-002,MonitoringTelemetry,"Seq-2; UC_Monitor"

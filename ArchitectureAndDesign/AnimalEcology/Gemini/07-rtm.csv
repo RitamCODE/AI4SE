@@ -1,0 +1,16 @@
+```csv
+ReqID,StoryID,NFRID,ADRID,C4 Node/Edge,Diagram File/Name
+FR-002,US-36,NFR-P1,ADR-1,Edge Agent,Flow 1
+FR-006,US-36,NFR-P1,ADR-1,Edge Agent,Flow 1
+FR-010,US-10,NFR-P2,ADR-3,Mission Planner,Flow 1
+FR-014,US-08,,ADR-3,Mission Planner,Flow 2
+FR-014,US-09,,ADR-3,Mission Planner,Flow 1
+FR-015,US-12,NFR-R3,,Mission Planner -> Parrot Anafi Drone,Flow 2
+FR-019,US-37,NFR-R1,ADR-2,Data Transfer Service,Flow 3
+FR-020,US-37,NFR-P3,ADR-2,Data Transfer Service -> OSC Storage,Flow 3
+FR-023,US-22,,,Pipeline Orchestrator -> Tapis API,Flow 3
+FR-024,US-22,,,Pipeline Orchestrator -> System Database,Flow 3
+FR-027,US-26,NFR-SEC2,,Web Portal & API,STRIDE
+FR-036,US-27,NFR-SEC2,,DevOps/Platform Admin -> Web Portal & API,STRIDE
+,US-14,,,"Wildlife Scientist -> Web Portal & API",Use Case
+,US-17,,,"Wildlife Scientist -> Web Portal & API",Use Case
